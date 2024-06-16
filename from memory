@@ -1,0 +1,36 @@
+function binarySearch(array, desired)
+	local lower = 0
+	local higher = #array - 1
+	
+	repeat
+		local half = lower + (higher - lower) // 2
+		if array[half]  == desired then
+			return half
+		elseif array[half] < desired then
+			lower = half + 1
+		else
+			higher = half - 1
+		end
+	until lower > higher
+	return false
+end
+
+
+function bubbleSort(array)
+	for pass=1, #array do
+		for i=1, #array-1 do
+			local buf = array[i]
+			
+			if array[i] > array[i+1] then
+				array[i] = array[i+1]
+				array[i+1] = buf
+			end
+		end
+	end
+	return array
+end
+
+local unsortedArray = {5,10,-7,1,600,8,6}
+
+bubbleSort(unsortedArray)
+print("binary search: "..binarySearch(unsortedArray, 8).." from array: "..unsortedArray)
