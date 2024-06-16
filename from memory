@@ -1,4 +1,4 @@
-function binarySearch(array, desired)
+function BinarySearch(array, desired)
 	local lower = 0
 	local higher = #array - 1
 	
@@ -16,7 +16,7 @@ function binarySearch(array, desired)
 end
 
 
-function bubbleSort(array)
+function BubbleSort(array)
 	for pass=1, #array do
 		for i=1, #array-1 do
 			local buf = array[i]
@@ -32,5 +32,5 @@ end
 
 local unsortedArray = {5,10,-7,1,600,8,6}
 
-bubbleSort(unsortedArray)
-print("binary search: "..binarySearch(unsortedArray, 8).." from array: "..unsortedArray)
+BubbleSort(unsortedArray)
+print("binary search: "..BinarySearch(unsortedArray, 8).." from array: "..unsortedArray)
