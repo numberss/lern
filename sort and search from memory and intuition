@@ -32,4 +32,4 @@ end
 local unsortedArray = {5,10,-7,1,600,8,6}
 
 BubbleSort(unsortedArray)
-print("binary search: "..BinarySearch(unsortedArray, 600).." from array: unsortedArray")
+print("binary search: "..tostring(BinarySearch(unsortedArray, 600)).." from array: unsortedArray")
