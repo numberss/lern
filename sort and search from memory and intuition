@@ -1,3 +1,26 @@
+-- just me getting back into some coding :D
+-- this is just going to be me trying to make as many search and sort algorithms from memory or thinking about it for long enough
+
+local unsortedArray = {5,10,-7,1,600,8,6}
+
+
+-- SORTS
+function BubbleSort(array)
+	for pass=1, #array do
+		for i=1, #array-1 do
+			local buf = array[i]
+			
+			if array[i] > array[i+1] then
+				array[i] = array[i+1]
+				array[i+1] = buf
+			end
+		end
+	end
+	return array
+end
+
+
+-- SEARCHES
 function BinarySearch(array, desired)
 	local lower = 0
 	local higher = #array - 1
@@ -15,21 +38,6 @@ function BinarySearch(array, desired)
 	return false
 end
 
-function BubbleSort(array)
-	for pass=1, #array do
-		for i=1, #array-1 do
-			local buf = array[i]
-			
-			if array[i] > array[i+1] then
-				array[i] = array[i+1]
-				array[i+1] = buf
-			end
-		end
-	end
-	return array
-end
-
-local unsortedArray = {5,10,-7,1,600,8,6}
 
 BubbleSort(unsortedArray)
 print("binary search: "..tostring(BinarySearch(unsortedArray, 600)).." from array: unsortedArray")
