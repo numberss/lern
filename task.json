@@ -1,0 +1,11 @@
+{
+    "version": "2.0.0",
+    "configurations": [
+        {
+            "type": "lua",
+            "request": "launch",
+            "name": "Launch",
+            "program": "${workspaceFolder}/src/main.lua"
+        }
+    ]
+}
